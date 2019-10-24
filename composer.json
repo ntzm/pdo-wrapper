@@ -1,6 +1,7 @@
 {
     "name": "ntzm/pdo-wrapper",
     "type": "library",
+    "license": "MIT",
     "require": {
         "ext-pdo": "*"
     },
