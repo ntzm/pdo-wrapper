@@ -1,0 +1,20 @@
+{
+    "name": "ntzm/pdo-wrapper",
+    "type": "library",
+    "require": {
+        "ext-pdo": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "PdoWrapper\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PdoWrapperTest\\": "tests/"
+        }
+    }
+}
