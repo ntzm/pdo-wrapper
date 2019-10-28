@@ -67,4 +67,9 @@ final class EmittingStatement implements StatementWrapper
     {
         return $this->statement->fetchColumn($columnNumber);
     }
+
+    public function rowCount(): int
+    {
+        return $this->statement->rowCount();
+    }
 }

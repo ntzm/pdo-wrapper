@@ -22,4 +22,6 @@ interface StatementWrapper
 
     /** @return mixed */
     public function fetchColumn(int $columnNumber = 0);
+
+    public function rowCount(): int;
 }
