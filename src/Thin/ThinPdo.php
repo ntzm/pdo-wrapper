@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace PdoWrapper\Emitting;
+namespace PdoWrapper\Thin;
 
 use InvalidArgumentException;
 use PDO;
