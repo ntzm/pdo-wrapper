@@ -25,9 +25,13 @@ final class EmittingStatement implements StatementWrapper
 
     public function execute(array $bindings = []): bool
     {
-        $id = $this->listener->startExecute($this->statement->queryString, array_replace($this->bindings, $bindings));
+        $id = $this->listener->startExecute($this->statement->queryString, $bindings ?: $this->bindings);
 
-        $result = $this->statement->execute($bindings);
+        if ($bindings) {
+            $result = $this->statement->execute($bindings);
+        } else {
+            $result = $this->statement->execute();
+        }
 
         $this->listener->endExecute($id);
 
